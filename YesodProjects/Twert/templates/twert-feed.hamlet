@@ -1,0 +1,21 @@
+<div class=container>
+    <p>Add a new Twert to the page!
+        <div class=form-container>
+            <form method=post action=@{TwertR} enctype=#{enctype}>
+                <table>
+                    ^{widget}
+                <button>Submit
+            <br>
+            <br>
+            <p>Your current auth id: #{show mAuthId}
+        <div id=twert-container>
+            $maybe _ <- mAuthId
+                <p>
+                    $if null twerts
+                        <p>No Twerts to see here!
+                    $else
+                        <h1>Twerts:
+                        $forall Entity twertId twert <- twerts
+                            <div class=twert>Title: #{twertTitle twert} </br> Content: #{twertContent twert}
+            $nothing
+                <p>You're not logged in

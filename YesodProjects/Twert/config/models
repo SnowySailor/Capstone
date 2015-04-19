@@ -1,0 +1,14 @@
+User
+    ident Text
+    email Text
+    password Text
+    UniqueUser ident
+    deriving Typeable Show
+
+Twert
+    title Text
+    content Text
+    time UTCTime
+    author Int64
+
+ -- By default this file is used in Model.hs (which is imported by Foundation.hs)

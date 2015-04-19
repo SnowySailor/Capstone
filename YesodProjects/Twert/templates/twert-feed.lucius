@@ -1,0 +1,28 @@
+.twert {
+	width:100%;
+	border:1px solid #000;
+	margin-top:2px;
+	background-color:#92E0FC;
+}
+
+/*#main {
+	height:95%;
+	overflow:hidden;
+}
+
+#twert-container {
+	overflow:scroll;
+	height:75%;
+}
+
+footer {
+	height:5%;
+}
+
+.form-container {
+	height:25%;
+}
+
+html, body, .container {
+	height:100%;
+}*/

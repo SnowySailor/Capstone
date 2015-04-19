@@ -1,0 +1,11 @@
+/static StaticR Static appStatic
+/auth   AuthR   Auth   getAuth
+
+/favicon.ico FaviconR GET
+/robots.txt RobotsR GET
+
+/ HomeR GET POST
+/register RegisterR GET POST
+/feed FeedR GET
+/add-twert TwertR GET POST
+/get-twert/#TwertId GetTwertR GET
