@@ -11,4 +11,4 @@ After installing that and following the isntructions, navigate to one of the Yes
 Once everything has installed without error, run `yesod devel` to start the server. Each time you save a file, it will recompile the code as fast as it can. Default port for running any of my apps is 3000 on your localhost.
 
 ##Compiling A Project
-Once you've finished developing the Yesod app, `cd` into the app root and execute `cabal clean` to clean stuff up. Then run `cabal configure && cabal build` to create an executible in ./dist/build/PROJECTNAME/. Pull that into a new directory with the `config` and `static` directories (or your project root directory) and then just run it. 
+Once you've finished developing the Yesod app, `cd` into the app root and execute `cabal clean` to clean stuff up. Then run `cabal configure && cabal build` to create an executible in ./dist/build/PROJECTNAME/. Pull that into a new directory with the `config` and `static` directories (or your project root directory) and then just run it.
