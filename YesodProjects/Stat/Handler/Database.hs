@@ -4,5 +4,5 @@ import Import
 
 getDatabaseR :: Handler Html
 getDatabaseR = do
-	people <- runDB $ selectList ([] :: [Filter Twert]) []
+	people <- runDB $ selectList ([] :: [Filter Person]) []
 	defaultLayout [whamlet|Person: #{show people}|]
