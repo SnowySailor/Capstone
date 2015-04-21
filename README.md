@@ -14,3 +14,6 @@ Once everything has installed without error, run `yesod devel` to start the serv
 
 ##Compiling A Project
 Once you've finished developing the Yesod app, `cd` into the app root and execute `cabal clean` to clean stuff up. Then run `cabal configure && cabal build` to create an executible in ./dist/build/PROJECTNAME/. Pull that into a new directory with the `config` and `static` directories (or your project root directory) and then just run it.
+
+##Running executibles from this repo
+Download the executible from the `HaskellStatExecutibles` directory. Run `chmod 700 stats1` (replace stats1 with whatever stats file it is). Then you can run it like ./stats1.
