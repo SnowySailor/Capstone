@@ -6,7 +6,7 @@
 	$stmt->execute();
 	$stmt->bind_result($personId, $personName, $personBirth, $personColor, $personEmail, $personWebsite);
 	while($stmt->fetch()) {
-		echo $personId . " " . $personName . " " . $personBirth . " " . $personColor . " " . $personEmail . " " . $personWebsite . "</br>";
+		echo $personId." ".$personName." ".$personBirth." ".$personColor." ".$personEmail." ".$personWebsite."</br>";
 	}
 	echo "</body><html>";
 ?>
