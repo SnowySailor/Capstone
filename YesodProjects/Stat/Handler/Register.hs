@@ -1,4 +1,4 @@
--- Corresponds to file ../PHP Files/register.php
+-- Corresponds to file ..../PHP Files/register.php
 module Handler.Register where
 
 import Import
