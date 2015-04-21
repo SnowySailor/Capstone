@@ -1,4 +1,5 @@
 -- Each of the 'stats_' executibles corresponds to a number of reads done. stats1 has 1, stats2 has two, etc.
+-- Corresponds to file ../PHP Files/stats.php
 
 import qualified Data.ByteString as B
 import qualified Data.ByteString.Char8 as C

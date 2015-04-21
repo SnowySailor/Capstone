@@ -1,4 +1,5 @@
 <?php
+	// Corresponds to file ../HaskellStatExecutibles/stats.hs
 	$myfile = fopen("/Users/Nickolas/Documents/onehundred.txt", "r") or die("Unable to open file!");
 	$file = fread($myfile,filesize("/Users/Nickolas/Documents/onehundred.txt"));
 	$pos = strpos($file, "(");

@@ -1,4 +1,5 @@
 <?php
+	// Corresponds to file ../YesodProjects/Stat/Handler/Database.hs
 	echo "<html><body>";
 	$con = new mysqli("localhost", "root", "rooty", "yesod");
 	$query = "SELECT * FROM `person`";

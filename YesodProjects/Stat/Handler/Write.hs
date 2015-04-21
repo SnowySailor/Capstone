@@ -1,3 +1,4 @@
+-- Corresponds to file ../PHP Files/write.php
 module Handler.Write where
 
 import Import

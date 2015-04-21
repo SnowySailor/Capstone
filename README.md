@@ -1,6 +1,8 @@
 # Capstone
 If you've stumbled upon this, you are able to see my adventures in learning how to use Yesod and how I compare it to PHP. We'll see how it goes.
 
+In the YesodProjects directory, you can find my Yesod projects. If you want to see the Haskell files that correspond to PHP files, look in either `YesodProjects/Stat/Handler/*.hs` or `PHP Files/*.php` to see. There will be a note at the top in a comment.
+
 ##Use
 If you want to use any of the projects and stuff, you'll need to first get `cabal`, which comes with [Haskell for Mac OSX](https://ghcformacosx.github.io/). 
 

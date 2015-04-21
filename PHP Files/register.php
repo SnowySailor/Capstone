@@ -1,4 +1,5 @@
 <?php
+// Corresponds to file ../YesodProjects/Stat/Handler/Register.hs
 error_reporting(E_ALL);
 if(isset($_POST['name'])) {
 	$con = new mysqli("localhost", "root", "rooty", "phpstat") or die("Error");
