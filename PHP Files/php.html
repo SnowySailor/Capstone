@@ -1,0 +1,86 @@
+<link rel="stylesheet" type="text/css" href="default.css">
+<div class="highlight"><pre><span class="cp">&lt;?php</span>
+	<span class="c1">// Corresponds to file ../YesodProjects/Stat/Handler/Write.hs</span>
+	<span class="nv">$myfile</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Library/WebServer/Documents/write.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="k">echo</span> <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">,</span><span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span><span class="p">);</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span>
+	<span class="c1">// Corresponds to file ../HaskellStatExecutibles/stats.hs</span>
+	<span class="nv">$myfile</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="nv">$file</span> <span class="o">=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">));</span>
+	<span class="nv">$pos</span> <span class="o">=</span> <span class="nb">strpos</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="s2">&quot;(&quot;</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$pos</span><span class="p">)</span>
+	    <span class="k">echo</span> <span class="s2">&quot;Not elem</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+	<span class="k">else</span>
+	    <span class="k">echo</span> <span class="s2">&quot;Elem</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+	<span class="nv">$array</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+	<span class="nv">$sorted</span> <span class="o">=</span> <span class="nb">sort</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
+	<span class="k">echo</span> <span class="p">(</span><span class="nv">$sorted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+	<span class="k">echo</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Done&quot;</span><span class="p">;</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">);</span>
+
+	<span class="nv">$myfile1</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="nv">$file1</span> <span class="o">=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile1</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">));</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile1</span><span class="p">);</span>
+
+	<span class="nv">$myfile2</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="nv">$file2</span> <span class="o">=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile2</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">));</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile2</span><span class="p">);</span>
+
+	<span class="nv">$myfile3</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="nv">$file3</span> <span class="o">=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile3</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">));</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile3</span><span class="p">);</span>
+
+	<span class="nv">$myfile4</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="nv">$file4</span> <span class="o">=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile4</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Users/Nickolas/Documents/onehundred.txt&quot;</span><span class="p">));</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile4</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span>
+<span class="c1">// Corresponds to file ../YesodProjects/Stat/Handler/Register.hs</span>
+<span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]))</span> <span class="p">{</span>
+	<span class="nv">$con</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span> <span class="s2">&quot;rooty&quot;</span><span class="p">,</span> <span class="s2">&quot;phpstat&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">);</span>
+
+	<span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+	<span class="nv">$birthday</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;birthday&#39;</span><span class="p">];</span>
+	<span class="nv">$color</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">];</span>
+	<span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
+	<span class="nv">$website</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;website&#39;</span><span class="p">];</span>
+
+	<span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO `person` (name, birthday, color, email, website) VALUES (?,?,?,?,?)&quot;</span><span class="p">;</span>
+	<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+	<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bind_param</span><span class="p">(</span><span class="s1">&#39;sssss&#39;</span><span class="p">,</span> <span class="nv">$name</span><span class="p">,</span> <span class="nv">$birthday</span><span class="p">,</span> <span class="nv">$color</span><span class="p">,</span> <span class="nv">$email</span><span class="p">,</span> <span class="nv">$website</span><span class="p">);</span>
+	<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+	<span class="k">echo</span> <span class="s2">&quot;Success!&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="k">echo</span> <span class="s1">&#39;&lt;form method=&quot;post&quot; action=&quot;register.php&quot;&gt;</span>
+<span class="s1">			&lt;label&gt;Name:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;&lt;/input&gt;&lt;/br&gt;</span>
+<span class="s1">			&lt;label&gt;Birthday:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;birthday&quot;&gt;&lt;/input&gt;&lt;/br&gt;</span>
+<span class="s1">			&lt;label&gt;Color:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;color&quot;&gt;&lt;/input&gt;&lt;/br&gt;</span>
+<span class="s1">			&lt;label&gt;Email:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;&lt;/input&gt;&lt;/br&gt;</span>
+<span class="s1">			&lt;label&gt;Website:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;&lt;/input&gt;&lt;/br&gt;	</span>
+<span class="s1">			&lt;button&gt;Submit&lt;/button&gt;</span>
+<span class="s1">		 &lt;/form&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span>
+	<span class="c1">// Corresponds to file ../YesodProjects/Stat/Handler/Read.hs</span>
+	<span class="nv">$myfile</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;/Library/WebServer/Documents/write.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Unable to open file!&quot;</span><span class="p">);</span>
+	<span class="k">echo</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">,</span><span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;/Library/WebServer/Documents/write.txt&quot;</span><span class="p">));</span>
+	<span class="nb">fclose</span><span class="p">(</span><span class="nv">$myfile</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">&lt;?php</span>
+	<span class="c1">// Corresponds to file ../YesodProjects/Stat/Handler/Database.hs</span>
+	<span class="k">echo</span> <span class="s2">&quot;&lt;html&gt;&lt;body&gt;&quot;</span><span class="p">;</span>
+	<span class="nv">$con</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span> <span class="s2">&quot;rooty&quot;</span><span class="p">,</span> <span class="s2">&quot;yesod&quot;</span><span class="p">);</span>
+	<span class="nv">$query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM `person`&quot;</span><span class="p">;</span>
+	<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+	<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+	<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bind_result</span><span class="p">(</span><span class="nv">$personId</span><span class="p">,</span> <span class="nv">$personName</span><span class="p">,</span> <span class="nv">$personBirth</span><span class="p">,</span> <span class="nv">$personColor</span><span class="p">,</span> <span class="nv">$personEmail</span><span class="p">,</span> <span class="nv">$personWebsite</span><span class="p">);</span>
+	<span class="k">while</span><span class="p">(</span><span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">())</span> <span class="p">{</span>
+		<span class="k">echo</span> <span class="nv">$personId</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$personName</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$personBirth</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$personColor</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$personEmail</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$personWebsite</span><span class="o">.</span><span class="s2">&quot;&lt;/br&gt;&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">echo</span> <span class="s2">&quot;&lt;/body&gt;&lt;html&gt;&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
